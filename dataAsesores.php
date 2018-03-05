@@ -65,7 +65,6 @@ try{
 		
 		print_r($anexGrid->responde($registros, $total));
 
-		// print_r($anexGrid->responde($registros, $total));
 
 }
 catch(PDOException $e)
