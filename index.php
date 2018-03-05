@@ -1,3 +1,5 @@
+<script type="text/javascript" src="jquery.anexgrid.js"></script>
+
 <div class="container-fluid">
         <div class="row">
           <div id="asesor"></div>
@@ -126,7 +128,7 @@ var grid = $("#asesor").anexGrid({
                   // });
                 }},
                 ],
-              url: 'datas/dataAsesores.php',
+              url: 'dataAsesores.php',
               paginable: true,
               filtrable: true,
               limite: [20, 40, 60],
