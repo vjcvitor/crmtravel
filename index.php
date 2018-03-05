@@ -27,7 +27,10 @@ function anexGrid_selectEstado(config) {
     config.attr = atributos;
 
     var control = $('<select style="' + config.style + '" class="form-control input-sm ' + config.class + '" ' + config.attr + '></select>');
-
+  $.each(config.data, function (i, d) {
+        control.append('<option ' + (d.valor == config.selected ? 'selected' : '') + ' value="' + d.valor + '">' + d.contenido + '</option>');
+    })
+return control;
 
     //   $.ajax({
     //       type: "POST",
@@ -38,9 +41,7 @@ function anexGrid_selectEstado(config) {
     //         });
     //     }
     // });
-    $.each(config.data, function (i, d) {
-        control.append('<option ' + (d.valor == config.selected ? 'selected' : '') + ' value="' + d.valor + '">' + d.contenido + '</option>');
-    })
+  
         // var url="verEstados.php";
         // $.getJSON(url,function(i,d){
         //       $.each(config.data, function(i,d){
@@ -52,7 +53,7 @@ function anexGrid_selectEstado(config) {
         //                   });
         //               });
 
-        return control;
+        
     }
 
 var grid = $("#asesor").anexGrid({
